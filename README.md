@@ -10,6 +10,16 @@ It is using the following two underlying implementations:
 It only supports hashing. Doesn't offer an async option and doesn't implement the HMAC format. If you are looking for those,
 please use the Node `scrypt` library.
 
+## API
+
+There is only one method returned for hashing using scrypt. All parameters are mandatory except the progress callback:
+- `key` - The key/passphrase. Although it accepts a String, please use a Buffer to avoid problems later.
+- `salt` - The salt. Same as with the `key`, please try to use a Buffer.
+- `n` - Iteration count.
+- `r` - Block size for the underlying hash.
+- `p` - Parallelization factor.
+- `dklen` - The derived key length aka. output size.
+
 ## Example usage
 
 ```js
@@ -23,7 +33,14 @@ var scrypt = require('scrypt.js/node') // C on Node
 scrypt(key, salt, n, r, p, dklen, progressCb) // returns Buffer
 ```
 
-Note, the `progressCb` is not available on Node.
+### The progress callback
+
+This callback (`progressCb` in the above example) is not available on Node.
+
+Every 1000 iterations it will return an object with the following properties:
+- `current` - Current iteration number.
+- `total` - Total iterations.
+- `percent` - Progress in percentage (double).
 
 ## Other scrypt implementations
 
