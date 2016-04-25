@@ -20,7 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "scryptsy": "1.2.1",
-    "scrypt": "6.0.1"
+    "scrypt": "6.0.2"
   },
   "browser": {
     "node.js": "js.js"
