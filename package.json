@@ -10,7 +10,7 @@
     "name": "Alex Beregszaszi",
     "email": "alex@rtfs.hu"
   },
-  "repository": "https://github.com/axic/scryptjs",
+  "repository": "https://github.com/axic/scrypt.js",
   "keywords": [
     "crypto",
     "scrypt",
