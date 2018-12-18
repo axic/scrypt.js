@@ -2,7 +2,7 @@
   "name": "scrypt.js",
   "version": "0.2.1",
   "description": "Scrypt in Node.js and in the browser. Fast & simple.",
-  "main": "node.js",
+  "main": "index.js",
   "scripts": {
     "lint": "standard",
     "test": "tape ./test/index.js"
@@ -20,7 +20,9 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "scryptsy": "^1.2.1",
+    "scryptsy": "^1.2.1"
+  },
+  "optionalDependencies": {
     "scrypt": "^6.0.2"
   },
   "browser": "js.js",
